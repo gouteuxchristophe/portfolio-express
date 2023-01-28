@@ -19,8 +19,10 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: 3rem;
-  height: calc(100vh - (31vh));
+  height: calc(100vh - (33vh));
 }
+
+#bloc_skills
 
 .flag_language, .link_container {
     height: 10vh;
@@ -87,21 +89,20 @@ body {
 }
 
 .nav {
-    width: 100%;
+    width: calc(100% - 2rem);
+    height: 4vh;
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
 }
 
-.nav_button {
-    width: 15px;
-    height: 15px;
+.nav_link {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid black;
     border-radius: 50%;
-}
-
-.active {
-    background-color: #0099ff;
+    padding: 0.5rem;
 }
 
 
@@ -237,10 +238,10 @@ b {
 
 .skill_category-title {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .skills_category_item-container {
