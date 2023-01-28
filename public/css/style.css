@@ -95,8 +95,13 @@ body {
 }
 
 .nav_button {
-    border: none;
-    background: transparent;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.active {
+    background-color: #0099ff;
 }
 
 
