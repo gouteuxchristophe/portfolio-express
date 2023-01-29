@@ -462,3 +462,31 @@ body {
     transform: rotateZ(360deg);
   }
 }
+
+@keyframes showMain { 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  animation: showMain 2s ease;
+}
+
+@keyframes hiddenMain { 
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+main.animate-out {
+  animation: hiddenMain 2s ease;
+}
