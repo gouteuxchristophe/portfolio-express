@@ -5,6 +5,24 @@
     <div class="projects_container">
         <div class="swiper">
           <div class="swiper-wrapper">
+            <% for (project of projects) { %>
+            
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="ressources/projects/<%= project.img %>" alt="">
+                  </div>
+                  <a href="<%= project.url %>" class="card_link">Lien du projet</a>
+                  <h3 class="card_title"><%= project.name %></h3>
+                  <p class="card_description"><%= project.text %></p>
+                  <div class="card_languages">
+                    <% for (let i = 0; i < project.languages.length; i++) { %>
+                      <div class="language_item"><%= project.languages[i] %></div>
+                   <% } %>
+                  </div>
+                </div>
+              </div>
+            <% } %>
             
           </div>
         </div>
