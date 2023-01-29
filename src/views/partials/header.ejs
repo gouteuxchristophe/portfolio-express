@@ -19,7 +19,6 @@
   </head>
 
   <body>
-    <div class="cirle-top-background"></div>
 
     <main class="main">
       <div class="flag_language">
@@ -38,3 +37,19 @@
           </div>
         </div>
       </div>
+      
+      <div class="nav_container">
+        <div class="dot"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav">
+          <% if (navPage === 'about') { %>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/projects">Projets</a></li> 
+          <% } else if (navPage === 'skills') { %>
+          <li><a href="/about">A propos</a></li>
+          <li><a href="/projects">Projets</a></li>
+          <% } else { %>
+            <li><a href="/about">A propos</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <% } %>
+          </ul>
+    </div>

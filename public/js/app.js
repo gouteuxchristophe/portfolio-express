@@ -1,14 +1,13 @@
 // Détection et background du menu de navigation
-const navButton = document.querySelectorAll(".nav_button");
+const navButton = document.querySelector(".dot");
+const menuElt = document.querySelector('.nav');
+const navContainer = document.querySelector('.nav_container');
 
-for (const button of navButton) {
-  button.addEventListener("click", handleNavButton);
-}
+
+  navButton.addEventListener("click", handleNavButton);
 
 function handleNavButton(event) {
-  const item = event.target;
-  console.log(item.id);
-  item.classList.add("active");
+  menuElt.classList.toggle('active');
 }
 
 const swiper = new Swiper(".swiper", {
@@ -24,4 +23,15 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   }
+});
+
+const swiperTitle = new Swiper(".swiper-title", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop: true,
+  effect: 'flip',
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+},
 });

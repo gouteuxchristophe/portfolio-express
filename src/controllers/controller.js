@@ -1,16 +1,21 @@
 // Import du dataMapper (SQL)
 const projects = require('../../data/projects')
-console.log(projects[0].languages);
+const express = require('express');
+
 
 // Objet du controller
 const controller = {
     pageHome: (req, res) => {
-        res.render('presentation');
+        res.locals.navPage = 'about';
+        
+        res.render('about');
     },
     pageSkills: (req, res) => {
+        res.locals.navPage = 'skills';
         res.render('skills');
     },
     pageProjects: (req, res) => {
+        res.locals.navPage = 'projects';
         res.render('projects', {projects});
     }
 };
