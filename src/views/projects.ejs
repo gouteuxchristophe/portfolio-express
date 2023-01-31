@@ -11,8 +11,10 @@
                   <div class="card_image">
                     <img src="ressources/projects/<%= project.img %>" alt="">
                   </div>
-                  <a href="<%= project.url %>" class="card_link">Lien du projet</a>
-                  <h3 class="card_title"><%= project.name %></h3>
+                  <div class="card_link-elt">
+                    <a href="<%= project.url %>" class="card_link"><i class="fa-solid fa-link"></i></a>
+                    <h3 class="card_title"><%= project.name %></h3>
+                  </div>
                   <p class="card_description"><%= project.text %></p>
                   <div class="card_languages">
                     <% for (let i = 0; i < project.languages.length; i++) { %>
@@ -31,3 +33,4 @@
 
 
 <%- include('partials/footer') %>
+

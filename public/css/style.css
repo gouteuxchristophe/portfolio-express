@@ -336,10 +336,14 @@ body {
   border-top-right-radius: 15px;
 }
 
+.card_link-elt {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
 .card_link {
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 1.5rem;
   color: #EC9B3B;
 }
 
@@ -386,6 +390,8 @@ body {
 .swiper-pagination-bullet-active {
   width: 4rem;
 }
+
+
 
 /* !  CUBE  */
 
