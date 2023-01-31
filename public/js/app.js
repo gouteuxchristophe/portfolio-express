@@ -12,7 +12,8 @@ function handleNavButton(event) {
 const swiper = new Swiper(".swiper", {
   spaceBetween: 30,
   centeredSlides: true,
-
+  loop: true,
+  effect: "flip",
   // autoplay: {
   //   delay: 4000,
   //   disableOnInteraction: false
@@ -35,7 +36,7 @@ const swiperTitle = new Swiper(".swiper-title", {
   },
 });
 
-// test link
+// Animate between page
 
 const links = document.querySelectorAll(".nav a");
 const main = document.querySelector('main')

@@ -172,54 +172,70 @@ body {
 /* ! LINK BOTTOM */
 
 .link_container {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  width: 100%;
-  padding-bottom: 0.8rem;
+  text-align: center;
+  }
+
+.link-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22);
+  color: #446eac;
+  overflow: hidden;
+  position: relative;
+  }
+
+.link-item i {
+  line-height: 90px;
+  font-size: 1rem;
+  transition: 0.2s linear;
 }
 
-.link_container_button {
-  padding: 15px 15px;
-  background-image: linear-gradient(-45deg, #0dff0d, #00ffff, #0099ff);
-  border-radius: 1000px;
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
-  -ms-border-radius: 1000px;
-  background-size: 400% 400%;
-  animation: mymove 3s linear infinite;
+.link-item:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
 }
 
-@keyframes mymove {
+.link-item::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #446eac;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.link-item:hover::before {
+  animation: hoverLink 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes hoverLink {
   0% {
-    background-position: 0% 50%;
+  left: -110%;
+  top: 90%;
   }
   50% {
-    background-position: 100% 50%;
+  left: 10%;
+  top: -30%;
   }
   100% {
-    background-position: 0% 50%;
+  top: -10%;
+  left: -10%;
   }
 }
-
-.link_button-item {
-  padding: 1rem;
-  border: none;
-  border-radius: 1000px;
-  font-weight: bolder;
-  font-size: 1rem;
-  mix-blend-mode: screen;
-  letter-spacing: 1px;
-  z-index: 10;
-}
-
-.link_button-item:active {
-  border: none;
-  -webkit-border: none;
-  -ms-border: none;
-  -moz-border: none;
-}
-
 
 /* ! BLOC PRESENTATION */
 .header_presentation-subtitle-span,
@@ -240,6 +256,7 @@ body {
 
 .header_presentation-content {
   color: rgb(187, 187, 187);
+  text-align: center;
 }
 
 /* ! BLOC SKILLS */
@@ -352,6 +369,7 @@ body {
   color: white;
   text-align: center;
   padding: 1rem;
+  font-size: 0.8rem;
 }
 
 #swiper-pagination {
@@ -463,6 +481,8 @@ body {
   }
 }
 
+
+/* Animation between page */
 @keyframes showMain { 
   0% {
     opacity: 0;
