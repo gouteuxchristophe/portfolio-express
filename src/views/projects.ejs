@@ -17,8 +17,9 @@
                   </div>
                   <p class="card_description"><%= project.text %></p>
                   <div class="card_languages">
-                    <% for (let i = 0; i < project.languages.length; i++) { %>
-                      <div class="language_item"><%= project.languages[i] %></div>
+                    <% const languageInProject = project.languages.split(' ')
+                      for (let i = 0; i < languageInProject.length; i++) { %>
+                      <div class="language_item"><%= languageInProject[i] %></div>
                    <% } %>
                   </div>
                 </div>

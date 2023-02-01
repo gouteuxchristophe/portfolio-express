@@ -12,37 +12,14 @@
         </div>
         <div class="skills_category_item-container">
           <div class="skills_category_item">
-            <div class="skill-item">
-              <img
-                src="ressources/icon-dev/html-5.png"
-                alt="html5"
-              />
-              <p>HTML5</p>
-            </div>
-            <div class="skill-item">
-              <img
-                src="ressources/icon-dev/css-3.png"
-                alt="css3"
-              />
-              <p>CSS3</p>
-            </div>
-            <div class="skill-item">
-              <img
-                src="ressources/icon-dev/sass.png"
-                alt="sass"
-              />
-              <p>SASS</p>
-            </div>
-            <div class="skill-item">
-              <img
-                src="ressources/icon-dev/js.png"
-                alt="JavaScript"
-              />
-              <p>Javascript</p>
-            </div>
-            <div class="skill-item">
-              <p>jQuery</p>
-            </div>
+            <% for (const skill of skillsFront) { %>
+              <div class="skill-item">
+                <img
+                  src="ressources/icon-dev/<%= skill.name %>.png"
+                  alt="<%= skill.name %>"
+                />
+              </div>
+           <% } %>
           </div>
         </div>
       </div>
@@ -56,16 +33,14 @@
         </div>
         <div class="skills_category_item-container">
           <div class="skills_category_item">
-            <div class="skill-item">
-              <img
-                src="ressources/icon-dev/nodejs.png"
-                alt="nodejs"
-              />
-              <p>NodeJS</p>
-            </div>
-            <div class="skill-item">
-              <p>Express</p>
-            </div>
+            <% for (const skill of skillsBack) { %>
+              <div class="skill-item">
+                <img
+                  src="ressources/icon-dev/<%= skill.name %>.png"
+                  alt="<%= skill.name %>"
+                />
+              </div>
+           <% } %>
           </div>
         </div>
       </div>
@@ -79,13 +54,14 @@
         </div>
         <div class="skills_category_item-container">
           <div class="skills_category_item">
-            <div class="skill-item">
-              <img
-                src="ressources/icon-dev/github.png"
-                alt="github"
-              />
-              <p>GitHub</p>
-            </div>
+            <% for (const skill of skillsGest) { %>
+              <div class="skill-item">
+                <img
+                  src="ressources/icon-dev/<%= skill.name %>.png"
+                  alt="<%= skill.name %>"
+                />
+              </div>
+           <% } %>
           </div>
         </div>
       </div>

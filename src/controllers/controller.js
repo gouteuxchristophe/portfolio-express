@@ -1,22 +1,32 @@
 // Import du dataMapper (SQL)
-const projects = require("../../data/projects");
 const dataMapper = require("../dataMapper");
 
 // Objet du controller
 const controller = {
-  pageHome: (req, res) => {
-    res.locals.navPage = "about";
-    res.render("about");
+  pageHome: async (req, res) => {
+    try {
+      const about = await dataMapper.getAbout();
+      res.locals.navPage = "about"; // Permet la dynamisation du menu
+      res.render("about", { about});
+    } catch (error) {
+      res.status(500).send(error.stack);
+    }
   },
-  pageSkills: (req, res) => {
-    res.locals.navPage = "skills";
-    res.render("skills");
+  pageSkills: async (req, res) => {
+    try {
+      const skillsFront = await dataMapper.getSkills('front-end');
+      const skillsBack = await dataMapper.getSkills('back-end');
+      const skillsGest= await dataMapper.getSkills('gestion');
+      res.locals.navPage = "skills"; // Permet la dynamisation du menu
+      res.render("skills", { skillsFront, skillsBack, skillsGest});
+    } catch (error) {
+      res.status(500).send(error.stack);
+    }
   },
   pageProjects: async (req, res) => {
     try {
-      const allProjects = await dataMapper.getAllProjects();
-      console.log(allProjects);
-      res.locals.navPage = "projects";
+      const projects = await dataMapper.getAllProjects();
+      res.locals.navPage = "projects"; // Permet la dynamisation du menu
       res.render("projects", { projects });
     } catch (error) {
         res.status(500).send(error.stack);
