@@ -86,14 +86,16 @@ body {
   gap: 1rem;
 }
 
-.flag_language-container-button {
+
+.flag_language-container-switch {
   height: 1rem;
   padding: 0.5rem 1rem 0.5rem;
   border-radius: 1rem;
   background-color: rgba(167, 221, 214, 0.2);
 }
 
-.flag_language-button {
+.flag_language-switch {
+  display: inline-block;
   border: none;
   background-color: transparent;
   background-size: contain;
@@ -105,6 +107,7 @@ body {
 /* ! NAV */
 
 .nav_container {
+  pointer-events: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -512,6 +515,7 @@ main.animate-out {
 }
 
 /* Affichage 404 */
+
 .container-error {
   display: flex;
 }

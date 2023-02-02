@@ -13,6 +13,8 @@ router.get('/', controller.pageHome);
 router.get('/about', controller.pageHome);
 router.get('/skills', controller.pageSkills);
 router.get('/projects', controller.pageProjects);
+router.get('/language/:lang', controller.switchLanguage);
+
 
 // on exporte le module
 module.exports = router;

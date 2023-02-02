@@ -9,6 +9,8 @@ function handleNavButton(event) {
   menuElt.classList.toggle("active");
 }
 
+
+// Slider page projects
 const swiper = new Swiper(".swiper", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -25,6 +27,8 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+
+// Slider title
 const swiperTitle = new Swiper(".swiper-title", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -37,7 +41,6 @@ const swiperTitle = new Swiper(".swiper-title", {
 });
 
 // Animate between page
-
 const links = document.querySelectorAll(".nav a");
 const main = document.querySelector('main')
 
