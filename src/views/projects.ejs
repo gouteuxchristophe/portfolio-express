@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 
-<div id="bloc_project">
+<section id="bloc_project">
     <h2 class="projects_title">Projets</h2>
     <div class="projects_container">
         <div class="swiper">
@@ -9,7 +9,7 @@
               <div class="swiper-slide">
                 <div class="card">
                   <div class="card_image">
-                    <img src="ressources/projects/<%= project.img %>" alt="">
+                    <img src="ressources/projects/<%= project.img %>" alt="Image qui représente un screenshoot du projet <%= project.name %>">
                   </div>
                   <div class="card_link-elt">
                     <a href="<%= project.url %>" class="card_link"><i class="fa-solid fa-link"></i></a>
@@ -29,8 +29,8 @@
           </div>
         </div>
         <div id="swiper-pagination" class="swiper-pagination"></div>
-      </div>
-  </div>
+    </div>
+</section>
 
 
 <%- include('partials/footer') %>

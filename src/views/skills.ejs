@@ -1,12 +1,12 @@
 <%- include('partials/header') %>
 
-<div id="bloc_skills" class="skills">
+<section id="bloc_skills" class="skills">
     <h2 class="skills_title">Compétences</h2>
-      <div class="skills_container">
+      <article class="skills_container">
         <div id="frontendSkills" class="skill_category-title">
           <img
             src="ressources/skills/skills_item.png"
-            alt="skills"
+            alt="Image qui représente le logo d'en-tête des skills"
           />
           <h3>Front-End</h3>
         </div>
@@ -16,18 +16,18 @@
               <div class="skill-item">
                 <img
                   src="ressources/icon-dev/<%= skill.name %>.png"
-                  alt="<%= skill.name %>"
+                  alt="Image qui représente la skill : <%= skill.name %>"
                 />
               </div>
            <% } %>
           </div>
         </div>
-      </div>
-      <div class="skills_container">
+      </article>
+      <article class="skills_container">
         <div id="backendSkills" class="skill_category-title">
           <img
             src="ressources/skills/skills_item.png"
-            alt="skills"
+            alt="Image qui représente le logo d'en-tête des skills"
           />
           <h3>Back-End</h3>
         </div>
@@ -37,18 +37,18 @@
               <div class="skill-item">
                 <img
                   src="ressources/icon-dev/<%= skill.name %>.png"
-                  alt="<%= skill.name %>"
+                  alt="Image qui représente la skill <%= skill.name %>"
                 />
               </div>
            <% } %>
           </div>
         </div>
-      </div>
-      <div class="skills_container">
+      </article>
+      <article class="skills_container">
         <div id="projectManagementSkills" class="skill_category-title">
           <img
             src="ressources/skills/skills_item.png"
-            alt="skills"
+            alt="Image qui représente le logo d'en-tête des skills"
           />
           <h3>Gestion de projet</h3>
         </div>
@@ -58,13 +58,13 @@
               <div class="skill-item">
                 <img
                   src="ressources/icon-dev/<%= skill.name %>.png"
-                  alt="<%= skill.name %>"
+                  alt="Image qui représente la skill <%= skill.name %>"
                 />
               </div>
            <% } %>
           </div>
         </div>
-      </div>
-  </div>
+      </article>
+</section>
 
 <%- include('partials/footer') %>
