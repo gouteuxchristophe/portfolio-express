@@ -15,7 +15,7 @@ body {
   background-color: #E9E9E9;
 }
 
-#bloc_header, #bloc_skills, #bloc_project {
+#bloc_header, #bloc_skills, #bloc_project, .container-error {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -113,6 +113,7 @@ body {
   border-radius: 100%;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .nav_container a {
@@ -508,4 +509,13 @@ main {
 
 main.animate-out {
   animation: hiddenMain 2s ease;
+}
+
+/* Affichage 404 */
+.container-error {
+  display: flex;
+}
+.pageNotFound img, .server-error img{
+  width: 100%;
+  border-radius: 50%;
 }

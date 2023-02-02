@@ -18,7 +18,7 @@ app.use(express.static('public'));
 app.use(router);
 app.use('*', (req, res) => {
     res.statusCode = 404;
-    res.send('Page not found')
+    res.render('errors/404', { navPage: ''})
 });
 
 // Console log localhost / online

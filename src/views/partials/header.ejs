@@ -56,9 +56,13 @@
           <% } else if (navPage === 'skills') { %>
           <li><a href="/about">A propos</a></li>
           <li><a href="/projects">Projets</a></li>
-          <% } else { %>
+          <% } else if (navPage === 'projects') { %>
           <li><a href="/about">A propos</a></li>
           <li><a href="/skills">Skills</a></li>
-          <% } %>
+          <% } else { %>
+            <li><a href="/about">A propos</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/projects">Projets</a></li>
+         <% } %>
         </ul>
       </div>
