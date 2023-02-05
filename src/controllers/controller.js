@@ -16,11 +16,10 @@ const controller = {
   pageHome: async (req, res) => {
     try {
       const about = await dataMapper.getAbout();
-      res.locals.navPage = "about"; // Permet la dynamisation du menu
       res.render("about", { about });
     } catch (error) {
       res.status(500);
-      res.render("error/500", { navPage: "" });
+      res.render("error/500");
     }
   },
   pageSkills: async (req, res) => {
@@ -28,21 +27,19 @@ const controller = {
       const skillsFront = await dataMapper.getSkills("front-end");
       const skillsBack = await dataMapper.getSkills("back-end");
       const skillsGest = await dataMapper.getSkills("gestion");
-      res.locals.navPage = "skills"; // Permet la dynamisation du menu
       res.render("skills", { skillsFront, skillsBack, skillsGest });
     } catch (error) {
       res.status(500);
-      res.render("errors/500", { navPage: "" });
+      res.render("errors/500");
     }
   },
   pageProjects: async (req, res) => {
     try {
       const projects = await dataMapper.getAllProjects();
-      res.locals.navPage = "projects"; // Permet la dynamisation du menu
       res.render("projects", { projects });
     } catch (error) {
       res.status(500);
-      res.render("error/500", { navPage: "" });
+      res.render("error/500");
     }
   },
   switchLanguage: (req, res) => {
@@ -52,7 +49,7 @@ const controller = {
     res.redirect(`${req.session.url}`);
   },
   pageContact: (req, res) => {
-    res.render('contact', { navPage: "", confirmationSend: "" })
+    res.render('contact', { confirmationSend: "" })
   },
   sendForm: async (req, res) => {
     const transporter = nodemailer.createTransport({
@@ -75,10 +72,10 @@ const controller = {
     };
     try {
       await transporter.sendMail(mailOptions);
-      res.render('contact', { navPage: "", confirmationSend: 'Message sent successfully!' });
+      res.render('contact', { confirmationSend: 'Message sent successfully!' });
     } catch (error) {
       console.error(error);
-      res.render('contact', { navPage: "", confirmationSend: 'Error sending message, please try again later.'});
+      res.render('contact', { confirmationSend: 'Error sending message, please try again later.'});
     }
   }
 };

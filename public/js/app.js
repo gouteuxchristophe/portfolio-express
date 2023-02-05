@@ -1,51 +1,42 @@
 const swup = new Swup()
 
-
-
-// Détection et background du menu de navigation
-const navButton = document.querySelector(".dot");
-const menuElt = document.querySelector(".nav");
-const navContainer = document.querySelector(".nav_container");
-
-navButton.addEventListener("click", handleNavButton);
-
-function handleNavButton(event) {
-  menuElt.classList.toggle("active");
+const initApp = () => {
+  // Slider projects
+  swiper = new Swiper(".swiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    effect: "flip",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  // Slider du titre
+  swiperTitle = new Swiper(".swiper-title", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    effect: "flip",
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+  });
 }
 
-// Slider page projects
-const swiper = new Swiper(".swiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  loop: true,
-  effect: "flip",
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false
-  // },
+if (document.ready) {
+  initApp();
+} else {
+  document.addEventListener('DOMContentLoaded', initApp);
+}
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+swup.on('transitionEnd', function () {
+  initApp();
 });
-
-// Slider title
-const swiperTitle = new Swiper(".swiper-title", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  loop: true,
-  effect: "flip",
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
-});
-
 
 
 // Sécurisation du formulaire
-
 const contactForm = document.querySelector("form");
 if(contactForm) {
   contactForm.addEventListener("submit", checkForm);

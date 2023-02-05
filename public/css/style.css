@@ -36,14 +36,13 @@ body {
     height: 10vh;
 }
 
-.react_logo {
+.profile-picture {
   width: 20%;
+  border-radius: 50%;
 }
 
 /* ! DARKMODE  */ 
-.darkmode {
-  background-color: #252525;
-}
+
 
 /* ! CIRCLE BOTTOM */
 
@@ -110,7 +109,6 @@ body {
   left: calc((100vw - 2vw) /2);
   top: 0;
   width: 2vw;
-  height: 20vh;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -119,14 +117,7 @@ body {
 
 .nav_container a {
   text-decoration: none;
-}
-
-.nav_container li {
-  border-radius: 15px;
-  background-color: white;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
+  color: black;
 }
 
 .nav {
@@ -138,7 +129,6 @@ body {
   gap: 1rem;
 }
 
-
 /* ! LINK BOTTOM */
 
 .link_container {
@@ -149,7 +139,7 @@ body {
   text-align: center;
   }
 
-.link-item {
+.link-item, .nav-item  {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -164,18 +154,18 @@ body {
   position: relative;
   }
 
-.link-item i {
+.link-item i, .nav-item i {
   line-height: 90px;
   font-size: 1rem;
   transition: 0.2s linear;
 }
 
-.link-item:hover i {
+.link-item:hover i, .nav-item:hover i {
   transform: scale(1.3);
   color: #f1f1f1;
 }
 
-.link-item::before {
+.link-item::before, .nav-item::before {
   content: "";
   position: absolute;
   width: 120%;
@@ -186,7 +176,7 @@ body {
   top: 90%;
 }
 
-.link-item:hover::before {
+.link-item:hover::before, .nav-item:hover::before {
   animation: hoverLink 0.7s 1;
   top: -10%;
   left: -10%;
