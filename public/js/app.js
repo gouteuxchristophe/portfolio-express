@@ -25,11 +25,8 @@ const initApp = () => {
   });
 }
 
-if (document.ready) {
-  initApp();
-} else {
-  document.addEventListener('DOMContentLoaded', initApp);
-}
+initApp();
+
 
 swup.on('transitionEnd', function () {
   initApp();

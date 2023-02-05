@@ -1,0 +1,128 @@
+/* ! X-Small */
+@media screen and (min-width: 400px) {
+    .header_container-content-cube {
+        display: block;
+    }
+    .profile-picture {
+        width: 10%;
+    }
+    .page_projects {
+        gap: 1rem;
+    }
+    .projects_container {
+        width: 80%;
+    }
+}
+
+/* ! Small */
+@media screen and (min-width: 576px) {
+    .nav-item, .link-item {
+        width: 45px;
+        height: 45px;
+    }
+    .header_presentation-content {
+        text-align: center;
+        line-height: 1.2rem;
+    }
+    .page-header {
+        gap: 3rem;
+    }
+    .page-skills {
+        gap: 1rem;
+    }
+    .skill-item {
+        width: 20%;
+    }
+    .skill_category-title {
+        font-size: 1rem;
+    }
+    .skill_category-title img {
+        width: 10%;
+    }
+    .projects_container {
+        width: 35%;
+    }
+}
+
+/* ! Medium */
+@media screen and (min-width: 768px) {
+    .header_presentation-subtitle {
+        font-size:  1.2rem;
+    }
+    .header_presentation-title {
+        font-size: 2.5rem;
+    }
+    .header_presentation-content {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .header_presentation-statut {
+        text-align: center;
+    }
+    .page-header {
+        gap: 2.5rem;
+    }
+    .skill-item {
+        width: 18%;
+    }
+    .skill-item img {
+        width: 30%;
+    }
+    .projects_title {
+        text-align: center;
+    }
+}
+
+/* ! large */
+@media screen and (min-width: 992px) {
+    .skills_title {
+        text-align: center;
+    }
+    .skill_category-title {
+        justify-content: center;
+    }
+    .projects_container {
+        width: 30%;
+    }
+    .page_projects {
+        gap: 1rem;
+    }
+}
+
+/* ! Extra Large */
+@media screen and (min-width: 1200px) {
+    .page-header {
+        gap: 3rem;
+    }
+    .header_presentation-content, .header_presentation-statut{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    
+    .page-skills {
+        gap: 0.5rem;
+    }
+    .skill_category-title img {
+        width: 7%;
+    }
+    .skill-item img {
+        width: 25%;
+    }
+    .link_container {
+        justify-content: flex-end;
+        width: 95%;
+    }
+    .page-projects {
+        gap: 0.5rem;
+    }
+   
+    
+    
+}
+
+/* ! XXL */
+@media screen and (min-width: 1400px) {
+    
+}
