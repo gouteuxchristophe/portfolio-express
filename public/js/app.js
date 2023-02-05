@@ -9,7 +9,6 @@ function handleNavButton(event) {
   menuElt.classList.toggle("active");
 }
 
-
 // Slider page projects
 const swiper = new Swiper(".swiper", {
   spaceBetween: 30,
@@ -27,7 +26,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-
 // Slider title
 const swiperTitle = new Swiper(".swiper-title", {
   spaceBetween: 30,
@@ -40,16 +38,41 @@ const swiperTitle = new Swiper(".swiper-title", {
   },
 });
 
-// Animate between page
-const links = document.querySelectorAll(".nav a");
-const main = document.querySelector('main')
 
-for (const link of links) {
-  link.addEventListener("click", function (event) {
-    event.preventDefault()
-    main.classList.add("animate-out");
-    setTimeout(function () {
-      window.location.href = link.href;
-    }, 1800);
-  });
+
+// Sécurisation du formulaire
+
+const contactForm = document.querySelector("form");
+contactForm.addEventListener("submit", checkForm);
+
+function checkForm(e) {
+  e.preventDefault();
+  let error = 'Ce champ est vide';
+  let regex = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/
+  let name = contactForm.elements["name"];
+  let object = contactForm.elements["object"];
+  let email = contactForm.elements["email"];
+  let message = contactForm.elements["message"];
+
+  if (name.value == '') {
+    name.placeholder = error;
+    name.focus()
+    return false
+  }
+  if (object.value == '') {
+    object.placeholder = error;
+    object.focus()
+    return false
+  }
+  if (regex.exec(email.value) == null) {
+    email.placeholder = error
+    email.focus()
+    return false
+}
+if (message.value == '') {
+  message.placeholder = error;
+  message.focus()
+  return false
+}
+  contactForm.submit();
 }

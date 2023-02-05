@@ -4,10 +4,12 @@ const session = require('express-session');
 const router = require('./src/routers/router');
 require('dotenv').config();
 
+
 // Déclaration express
 const app = express();
 
 // Set views EJS + path views
+app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/src/views');
 

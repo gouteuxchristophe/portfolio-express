@@ -14,6 +14,8 @@ router.get('/about', controller.recoveryInfo, controller.pageHome);
 router.get('/skills', controller.recoveryInfo, controller.pageSkills);
 router.get('/projects', controller.recoveryInfo, controller.pageProjects);
 router.get('/language/:lang', controller.switchLanguage);
+router.get('/contactMe', controller.recoveryInfo, controller.pageContact);
+router.post('/sendForm', controller.sendForm)
 
 
 // on exporte le module
