@@ -60,8 +60,8 @@ const controller = {
       port: 465,
       secure: true,
       auth: {
-        user: 'contact@christophegouteux.fr',
-        pass: 'Mael&Lucas1210'
+        user: process.env.USER,
+        pass: process.env.PASSWORD
       },
       tls: {
         rejectUnauthorized: false

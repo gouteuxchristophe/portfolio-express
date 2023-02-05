@@ -15,7 +15,7 @@ body {
   background-color: #E9E9E9;
 }
 
-#bloc_header, #bloc_skills, #bloc_project, .container-error, .form_container {
+.page-header, .page-skills, .page-projects, .container-error, .form_container {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ body {
   height: calc(100vh - (33vh));
 }
 
-#bloc_project {
+.page-projects {
   gap: 1.5rem;
 }
 
@@ -129,49 +129,15 @@ body {
   align-items: center;
 }
 
-.dot {
-  margin-top: 1rem;
-  padding: 1rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav {
-  visibility: hidden;
   position: absolute;
-  top: 50%;
+  top: 1.5vh;
   width: 50%;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.nav.active {
-  visibility: visible;
-  animation: 2s fadeIn;  
-}
-
-.nav_container:has(.nav.active) {
-  width: 100%;
-  left: 0;
-  animation: 2s fadeIn;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
 
 /* ! LINK BOTTOM */
 
@@ -550,3 +516,19 @@ label {
 }
 
 
+.transition-fade {
+  transition: 500ms;
+  opacity: 1;
+  transform: translateX(0);
+  transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateX(0);
+}

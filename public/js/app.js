@@ -1,3 +1,7 @@
+const swup = new Swup()
+
+
+
 // Détection et background du menu de navigation
 const navButton = document.querySelector(".dot");
 const menuElt = document.querySelector(".nav");
@@ -43,7 +47,9 @@ const swiperTitle = new Swiper(".swiper-title", {
 // Sécurisation du formulaire
 
 const contactForm = document.querySelector("form");
-contactForm.addEventListener("submit", checkForm);
+if(contactForm) {
+  contactForm.addEventListener("submit", checkForm);
+}
 
 function checkForm(e) {
   e.preventDefault();

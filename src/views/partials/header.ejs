@@ -25,6 +25,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <script src="https://unpkg.com/swup@3"></script>
     <title>Folio - Christophe Gouteux</title>
   </head>
 
@@ -48,21 +49,9 @@
       </div>
 
       <div class="nav_container">
-        <div class="dot"><i class="fa-solid fa-bars"></i></div>
         <ul class="nav">
-          <% if (navPage === 'about') { %>
+          <li><a href="/about">About</a></li>
           <li><a href="/skills">Skills</a></li>
           <li><a href="/projects">Projets</a></li>
-          <% } else if (navPage === 'skills') { %>
-          <li><a href="/about">A propos</a></li>
-          <li><a href="/projects">Projets</a></li>
-          <% } else if (navPage === 'projects') { %>
-          <li><a href="/about">A propos</a></li>
-          <li><a href="/skills">Skills</a></li>
-          <% } else { %>
-            <li><a href="/about">A propos</a></li>
-            <li><a href="/skills">Skills</a></li>
-            <li><a href="/projects">Projets</a></li>
-         <% } %>
         </ul>
       </div>
