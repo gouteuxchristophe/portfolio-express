@@ -35,14 +35,21 @@ const controller = {
       res.render("error/500", { navPage: "" });
     }
   },
-  switchLanguage: (req, res) => {
-    if (!req.session.language || req.session.language === undefined){
-      req.session.language = [];
+  recoveryInfo: (req, res, next) => {
+    if (req.session.language === undefined || !req.session.language) {
+      req.session.language = "french";
     }
-    req.session.language.push(req.params.lang)
-    console.log(req.session);
-    res.redirect('/')
-  }
+    req.session.url = req.originalUrl;
+    const valueLanguage = req.session.language;
+    res.locals.valueLanguage = valueLanguage;
+    next();
+  },
+  switchLanguage: (req, res) => {
+    req.session.language = req.params.lang;
+    const valueLanguage = req.session.language;
+    res.locals.valueLanguage = valueLanguage;
+    res.redirect(`${req.session.url}`);
+  },
 };
 
 //on exporte le module

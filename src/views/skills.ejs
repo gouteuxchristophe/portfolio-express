@@ -1,70 +1,73 @@
 <%- include('partials/header') %>
 
 <section id="bloc_skills" class="skills">
-    <h2 class="skills_title">Compétences</h2>
-      <article class="skills_container">
-        <div id="frontendSkills" class="skill_category-title">
+  <h2 class="skills_title">
+    <% if (valueLanguage === 'english') { %> Skills <% } else { %> Compétences
+    <%}%>
+  </h2>
+  <article class="skills_container">
+    <div id="frontendSkills" class="skill_category-title">
+      <img
+        src="ressources/skills/skills_item.png"
+        alt="Image qui représente le logo d'en-tête des skills"
+      />
+      <h3>Front-End</h3>
+    </div>
+    <div class="skills_category_item-container">
+      <div class="skills_category_item">
+        <% for (const skill of skillsFront) { %>
+        <div class="skill-item">
           <img
-            src="ressources/skills/skills_item.png"
-            alt="Image qui représente le logo d'en-tête des skills"
+            src="ressources/icon-dev/<%= skill.name %>.png"
+            alt="Image qui représente la skill : <%= skill.name %>"
           />
-          <h3>Front-End</h3>
         </div>
-        <div class="skills_category_item-container">
-          <div class="skills_category_item">
-            <% for (const skill of skillsFront) { %>
-              <div class="skill-item">
-                <img
-                  src="ressources/icon-dev/<%= skill.name %>.png"
-                  alt="Image qui représente la skill : <%= skill.name %>"
-                />
-              </div>
-           <% } %>
-          </div>
-        </div>
-      </article>
-      <article class="skills_container">
-        <div id="backendSkills" class="skill_category-title">
+        <% } %>
+      </div>
+    </div>
+  </article>
+  <article class="skills_container">
+    <div id="backendSkills" class="skill_category-title">
+      <img
+        src="ressources/skills/skills_item.png"
+        alt="Image qui représente le logo d'en-tête des skills"
+      />
+      <h3>Back-End</h3>
+    </div>
+    <div class="skills_category_item-container">
+      <div class="skills_category_item">
+        <% for (const skill of skillsBack) { %>
+        <div class="skill-item">
           <img
-            src="ressources/skills/skills_item.png"
-            alt="Image qui représente le logo d'en-tête des skills"
+            src="ressources/icon-dev/<%= skill.name %>.png"
+            alt="Image qui représente la skill <%= skill.name %>"
           />
-          <h3>Back-End</h3>
         </div>
-        <div class="skills_category_item-container">
-          <div class="skills_category_item">
-            <% for (const skill of skillsBack) { %>
-              <div class="skill-item">
-                <img
-                  src="ressources/icon-dev/<%= skill.name %>.png"
-                  alt="Image qui représente la skill <%= skill.name %>"
-                />
-              </div>
-           <% } %>
-          </div>
-        </div>
-      </article>
-      <article class="skills_container">
-        <div id="projectManagementSkills" class="skill_category-title">
+        <% } %>
+      </div>
+    </div>
+  </article>
+  <article class="skills_container">
+    <div id="projectManagementSkills" class="skill_category-title">
+      <img
+        src="ressources/skills/skills_item.png"
+        alt="Image qui représente le logo d'en-tête des skills"
+      />
+      <h3>Gestion de projet</h3>
+    </div>
+    <div class="skills_category_item-container">
+      <div class="skills_category_item">
+        <% for (const skill of skillsGest) { %>
+        <div class="skill-item">
           <img
-            src="ressources/skills/skills_item.png"
-            alt="Image qui représente le logo d'en-tête des skills"
+            src="ressources/icon-dev/<%= skill.name %>.png"
+            alt="Image qui représente la skill <%= skill.name %>"
           />
-          <h3>Gestion de projet</h3>
         </div>
-        <div class="skills_category_item-container">
-          <div class="skills_category_item">
-            <% for (const skill of skillsGest) { %>
-              <div class="skill-item">
-                <img
-                  src="ressources/icon-dev/<%= skill.name %>.png"
-                  alt="Image qui représente la skill <%= skill.name %>"
-                />
-              </div>
-           <% } %>
-          </div>
-        </div>
-      </article>
+        <% } %>
+      </div>
+    </div>
+  </article>
 </section>
 
 <%- include('partials/footer') %>

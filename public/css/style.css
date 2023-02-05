@@ -86,7 +86,6 @@ body {
   gap: 1rem;
 }
 
-
 .flag_language-container-switch {
   height: 1rem;
   padding: 0.5rem 1rem 0.5rem;
@@ -107,11 +106,10 @@ body {
 /* ! NAV */
 
 .nav_container {
-  pointer-events: none;
   position: absolute;
-  left: 0;
+  left: calc((100vw - 2vw) /2);
   top: 0;
-  width: 100%;
+  width: 2vw;
   height: 20vh;
   border-radius: 100%;
   display: flex;
@@ -159,6 +157,8 @@ body {
 }
 
 .nav_container:has(.nav.active) {
+  width: 100%;
+  left: 0;
   animation: 2s fadeIn;
   background-color: rgba(0, 0, 0, 0.4);
 }

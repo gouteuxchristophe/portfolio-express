@@ -9,10 +9,10 @@ const router = express.Router();
 
 // Route =>
 
-router.get('/', controller.pageHome);
-router.get('/about', controller.pageHome);
-router.get('/skills', controller.pageSkills);
-router.get('/projects', controller.pageProjects);
+router.get('/', controller.recoveryInfo, controller.pageHome);
+router.get('/about', controller.recoveryInfo, controller.pageHome);
+router.get('/skills', controller.recoveryInfo, controller.pageSkills);
+router.get('/projects', controller.recoveryInfo, controller.pageProjects);
 router.get('/language/:lang', controller.switchLanguage);
 
 

@@ -1,67 +1,65 @@
 <%- include('partials/header') %>
 
 <header id="bloc_header" class="header">
-    <h2 class="header_presentation-subtitle">
-      Hello ! Je suis
-      <span class="header_presentation-subtitle-span"
-        ><strong>Christophe Gouteux</strong> </span
-      >
-    </h2>
-    <h1 class="header_presentation-title">
-      <div class="swiper-title">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><strong>Développeur</strong></div>
-          <div class="swiper-slide"><strong>web</strong></div>
-          <div class="swiper-slide"><strong>Fullstack JS</strong></div>
-          <div class="swiper-slide"><strong>React</strong></div>
-        </div>
+  <h2 class="header_presentation-subtitle">
+    Hello ! Je suis
+    <span class="header_presentation-subtitle-span"
+      ><strong>Christophe Gouteux</strong>
+    </span>
+  </h2>
+  <h1 class="header_presentation-title">
+    <div class="swiper-title">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><strong>Développeur</strong></div>
+        <div class="swiper-slide"><strong>web</strong></div>
+        <div class="swiper-slide"><strong>Fullstack JS</strong></div>
+        <div class="swiper-slide"><strong>React</strong></div>
       </div>
-    </h1>
-    <p class="header_presentation-content">
-      <%= about.text_fr %>
-    </p>
-    <span class="header_presentation-statut"
-      ><%= about.subtitle_fr %></span
-    >
-
-    <div class="header_container-content-cube">
-      <div id="cube3a">
-        <div id="cube3b">
-          <div id="cube3c">
-            <div id="cube3d">
-              <img
-                class="face avant"
-                src="ressources/logo_cube/react.png"
-                alt="Image qui représente le logo du langage web react sur une face du cube"
-              />
-              <img
-                class="face haut"
-                src="ressources/logo_cube/sass.png"
-                alt="Image qui représente le logo du langage web sass sur une face du cube"
-              />
-              <img
-                class="face gauche"
-                src="ressources/logo_cube/js.png"
-                alt="lImage qui représente le logo du langage web javascript sur une face du cube"
-              />
-              <img
-                class="face droite"
-                src="ressources/logo_cube/brand-github.png"
-                alt="Image qui représente le logo du versionning github sur une face du cube"
-              />
-              <img class="face bas" src="ressources/logo_cube/html_css.png" />
-              <img
-                class="face arriere"
-                src="ressources/logo_cube/fullstack_logo.png"
-                alt="Image qui représente le logo fullstack sur une face du cube"
-              />
-            </div>
+    </div>
+  </h1>
+  <% if (valueLanguage === 'english') { %>
+  <p class="header_presentation-content"><%= about.text_en%></p>
+  <span class="header_presentation-statut"><%= about.subtitle_en %></span>
+  <%} else { %>
+  <p class="header_presentation-content"><%= about.text_fr %></p>
+  <span class="header_presentation-statut"><%= about.subtitle_fr %></span>
+  <% } %>
+  <div class="header_container-content-cube">
+    <div id="cube3a">
+      <div id="cube3b">
+        <div id="cube3c">
+          <div id="cube3d">
+            <img
+              class="face avant"
+              src="ressources/logo_cube/react.png"
+              alt="Image qui représente le logo du langage web react sur une face du cube"
+            />
+            <img
+              class="face haut"
+              src="ressources/logo_cube/sass.png"
+              alt="Image qui représente le logo du langage web sass sur une face du cube"
+            />
+            <img
+              class="face gauche"
+              src="ressources/logo_cube/js.png"
+              alt="lImage qui représente le logo du langage web javascript sur une face du cube"
+            />
+            <img
+              class="face droite"
+              src="ressources/logo_cube/brand-github.png"
+              alt="Image qui représente le logo du versionning github sur une face du cube"
+            />
+            <img class="face bas" src="ressources/logo_cube/html_css.png" />
+            <img
+              class="face arriere"
+              src="ressources/logo_cube/fullstack_logo.png"
+              alt="Image qui représente le logo fullstack sur une face du cube"
+            />
           </div>
         </div>
       </div>
     </div>
-  
+  </div>
 </header>
-
 
 <%- include('partials/footer') %>
