@@ -8,8 +8,11 @@ const initApp = () => {
     loop: true,
     effect: "flip",
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+      clickable: true
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
   });
   // Slider du titre

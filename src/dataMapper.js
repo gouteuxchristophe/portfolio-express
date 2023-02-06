@@ -8,9 +8,9 @@ const dataMapper = {
       });
     });
   },
-  getSkills: async (domaine) => {
+  getSkills: async () => {
     return new Promise((resolve, reject) => {
-      connection.query(`SELECT * FROM skills WHERE domaine = '${domaine}'`, (err, result) => {
+      connection.query("SELECT * FROM skills", (err, result) => {
         return err ? reject(err) : resolve(result);
       });
     });

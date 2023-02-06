@@ -24,23 +24,16 @@
         text-align: center;
         line-height: 1.2rem;
     }
-    .page-header {
-        gap: 3rem;
+    .projects_container {
+        width: 60%;
     }
     .page-skills {
-        gap: 1rem;
+        width: 80%;
+        margin: 0 auto;
     }
-    .skill-item {
-        width: 20%;
-    }
-    .skill_category-title {
-        font-size: 1rem;
-    }
-    .skill_category-title img {
-        width: 10%;
-    }
-    .projects_container {
-        width: 35%;
+    .skills_circle {
+        width: 5rem;
+        height: 5rem;
     }
 }
 
@@ -61,28 +54,20 @@
     .header_presentation-statut {
         text-align: center;
     }
-    .page-header {
-        gap: 2.5rem;
-    }
-    .skill-item {
-        width: 18%;
-    }
-    .skill-item img {
-        width: 30%;
-    }
     .projects_title {
         text-align: center;
+    }
+    .skills_circle {
+        width: 6rem;
+        height: 6rem;
+    }
+    .projects_container {
+        width: 50%;
     }
 }
 
 /* ! large */
 @media screen and (min-width: 992px) {
-    .skills_title {
-        text-align: center;
-    }
-    .skill_category-title {
-        justify-content: center;
-    }
     .projects_container {
         width: 30%;
     }
@@ -93,46 +78,27 @@
         width: 80%;
         margin: 0 auto;
       }
+      .skills_circle {
+        width: 7rem;
+        height: 7rem;
+    }
+    .projects_container {
+        width: 40%;
+    }
 }
 
 /* ! Extra Large */
 @media screen and (min-width: 1200px) {
-    .page-header {
-        gap: 3rem;
-    }
     .header_presentation-content, .header_presentation-statut{
         font-size: 1.2rem;
         line-height: 2rem;
-    }
-    
-    .page-skills {
-        gap: 0.5rem;
-    }
-    .skill_category-title {
-        font-size: 1.5rem;
-    }
-    .skill_category-title img {
-        width: 15%;
-    }
-    .skill-item img {
-        width: 50%;
-    }
+    } 
     .link_container {
         justify-content: flex-end;
         width: 95%;
     }
     .page-projects {
         gap: 0.5rem;
-    }
-    .page-skills {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .skills_title {
-        width: 100%;
-    }
-    .skills_container {
-        width: 49%;
     }
     .pageNotFound, .server-error{
         width: 60%;
@@ -141,12 +107,14 @@
     #github_stats {
         display: block;
     }
-   
-    
-    
-}
-
-/* ! XXL */
-@media screen and (min-width: 1400px) {
-    
+    .skills_circle {
+        width: 8rem;
+        height: 8rem;
+    }
+    .skills_container-item {
+        gap: 3rem;
+    }
+    .projects_container {
+        width: 30%;
+    }
 }

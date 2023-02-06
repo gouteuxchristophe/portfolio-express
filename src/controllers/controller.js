@@ -15,10 +15,8 @@ const controller = {
   },
   pageSkills: async (req, res) => {
     try {
-      const skillsFront = await dataMapper.getSkills("front-end");
-      const skillsBack = await dataMapper.getSkills("back-end");
-      const skillsGest = await dataMapper.getSkills("gestion");
-      res.render("skills", { skillsFront, skillsBack, skillsGest });
+      const skills = await dataMapper.getSkills();
+      res.render("skills", { skills});
     } catch (error) {
       res.status(500);
       res.render("errors/500");
