@@ -1,8 +1,7 @@
 <%- include('partials/header') %>
 
 <section id="swup" class="page-projects transition-fade">
-    <h2 class="projects_title"><% if (valueLanguage === 'english') { %> Projects <% } else { %> Projets
-      <%}%></h2>
+    
     <div class="projects_container">
       <div id="swiper-pagination" class="swiper-pagination"></div>
         <div class="swiper">
@@ -17,11 +16,7 @@
                     <a href="<%= project.url %>" class="card_link"><i class="fa-solid fa-link"></i></a>
                     <h3 class="card_title"><%= project.name %></h3>
                   </div>
-                  <% if (valueLanguage === 'english') { %>
-                    <p class="card_description"><%= project.text_en %></p>
-                    <%} else { %>
                       <p class="card_description"><%= project.text_fr %></p>
-                    <% } %>
                   <div class="card_languages">
                     <% const languageInProject = project.languages.split(' ')
                       for (let i = 0; i < languageInProject.length; i++) { %>

@@ -71,15 +71,6 @@ body {
   border: 4px solid whitesmoke
 }
 
-/* ! SWITCH LANGUAGE MENU */
-
-.language_fr {
-  background-image: url("../ressources/flag/france.png");
-}
-
-.language_en {
-  background-image: url("../ressources/flag/united-kingdom.png");
-}
 
 .flag_language-container {
   display: flex;
@@ -88,22 +79,6 @@ body {
   gap: 1rem;
 }
 
-.flag_language-container-switch {
-  height: 1rem;
-  padding: 0.5rem 1rem 0.5rem;
-  border-radius: 1rem;
-  background-color: rgba(167, 221, 214, 0.2);
-}
-
-.flag_language-switch {
-  display: inline-block;
-  border: none;
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 1rem;
-  width: 1rem;
-}
 
 /* ! NAV */
 
@@ -544,5 +519,5 @@ html.is-leaving .transition-fade {
   display: none;
   left: 2rem;
   position: absolute;
-  bottom: -5rem;
+  bottom: 0rem;
 }

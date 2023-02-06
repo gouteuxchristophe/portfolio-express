@@ -4,15 +4,6 @@ const nodemailer = require('nodemailer');
 
 // Objet du controller
 const controller = {
-  recoveryInfo: (req, res, next) => {
-    if (req.session.language === undefined || !req.session.language) {
-      req.session.language = "french";
-    }
-    req.session.url = req.originalUrl;
-    const valueLanguage = req.session.language;
-    res.locals.valueLanguage = valueLanguage;
-    next();
-  },
   pageHome: async (req, res) => {
     try {
       const about = await dataMapper.getAbout();
@@ -41,12 +32,6 @@ const controller = {
       res.status(500);
       res.render("error/500");
     }
-  },
-  switchLanguage: (req, res) => {
-    req.session.language = req.params.lang;
-    const valueLanguage = req.session.language;
-    res.locals.valueLanguage = valueLanguage;
-    res.redirect(`${req.session.url}`);
   },
   pageContact: (req, res) => {
     res.render('contact', { confirmationSend: "" })

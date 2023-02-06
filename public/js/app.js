@@ -27,11 +27,9 @@ const initApp = () => {
 
 initApp();
 
-
 swup.on('transitionEnd', function () {
   initApp();
 });
-
 
 // Sécurisation du formulaire
 const contactForm = document.querySelector("form");
