@@ -210,6 +210,7 @@ body {
 
 .header_presentation-subtitle {
   text-align: right;
+  margin-right: 2rem;
 }
 
 .header_presentation-subtitle-span {
@@ -538,3 +539,10 @@ html.is-leaving .transition-fade {
   transform: translateX(0);
 }
 
+/* iframe */
+#github_stats {
+  display: none;
+  left: 2rem;
+  position: absolute;
+  bottom: -5rem;
+}
