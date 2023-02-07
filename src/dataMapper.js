@@ -24,4 +24,5 @@ const dataMapper = {
   },
 };
 
+/* Export du module vers le controller */
 module.exports = dataMapper;

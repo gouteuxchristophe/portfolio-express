@@ -9,7 +9,5 @@ const connection = mysql.createPool({
     options: { encrypt: false }
 })
 
-// connection.connect()
-
-// 4. Exporter le client connecté
+/* Export du module vers dataMapper */
 module.exports = connection;

@@ -17,8 +17,21 @@
       </div>
     </div>
   </h1>
-  <p class="header_presentation-content"><%= about.text_fr%></p>
-  <span class="header_presentation-statut"><%= about.subtitle_fr %></span>
+  <div class="container_console">
+    <div class="console_button">
+      <div class="red-button"></div>
+      <div class="orange-button"></div>
+      <div class="green-button"></div>
+    </div>
+    <div class="terminal">
+        <p class="animate-text"><%= about.text_fr%>
+          <span><%= about.subtitle_fr %></span>
+        </p>
+        <p>><span class="terminal_underscore">_</span></p>
+    </div>
+  </div>
+   
+  
   <div class="header_container-content-cube">
     <div id="cube3a">
       <div id="cube3b">
@@ -55,12 +68,6 @@
       </div>
     </div>
   </div>
-  <iframe id="github_stats"
-    title="Github Stats"
-    width="300"
-    height="200"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=gouteuxchristophe&show_icons=true&theme=radical">
-</iframe>
 </header>
 
 <%- include('partials/footer') %>

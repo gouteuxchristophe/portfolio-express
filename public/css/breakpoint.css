@@ -1,8 +1,6 @@
 /* ! X-Small */
 @media screen and (min-width: 400px) {
-    .header_container-content-cube {
-        display: block;
-    }
+    
     .profile-picture {
         width: 10%;
     }
@@ -16,6 +14,9 @@
 
 /* ! Small */
 @media screen and (min-width: 576px) {
+    .header_container-content-cube {
+        display: block;
+    }
     .nav-item, .link-item {
         width: 45px;
         height: 45px;
@@ -64,6 +65,10 @@
     .projects_container {
         width: 50%;
     }
+    .container_console {
+        width: 80%;
+        margin: 0 auto;
+      }
 }
 
 /* ! large */
@@ -85,6 +90,10 @@
     .projects_container {
         width: 40%;
     }
+    .container_console {
+        width: 60%;
+        margin: 0 auto;
+      }
 }
 
 /* ! Extra Large */
@@ -104,9 +113,6 @@
         width: 60%;
         margin: 0 auto;
       }
-    #github_stats {
-        display: block;
-    }
     .skills_circle {
         width: 8rem;
         height: 8rem;
@@ -117,4 +123,8 @@
     .projects_container {
         width: 30%;
     }
+    .container_console {
+        width: 40%;
+        margin: 0 auto;
+      }
 }

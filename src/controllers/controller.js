@@ -1,8 +1,8 @@
-// Import du dataMapper (SQL)
+/* Import du dataMapper (Requête SQL) et de nodemailer(SMTP mail)*/ 
 const dataMapper = require("../dataMapper");
 const nodemailer = require('nodemailer');
 
-// Objet du controller
+
 const controller = {
   pageHome: async (req, res) => {
     try {
@@ -63,5 +63,5 @@ const controller = {
   }
 };
 
-//on exporte le module
+/* Export du module vers le router*/
 module.exports = controller;
